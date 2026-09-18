@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Zoe Kao's work developing student-researched and developed solid rocket motors with the Case Rocket Team.">
+
+    <title>
+        SRAD Solid Rocket Motor Development | Zoe Kao
+    </title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="navbar">
+
+    <nav class="nav-left">
+
+        <a href="../index.html">
+            Home
+        </a>
+
+        <a href="../index.html#projects"
+           class="active">
+            Projects
+        </a>
+
+        <a href="../resume.pdf"
+           target="_blank">
+            Resume
+        </a>
+
+    </nav>
+
+
+    <div class="nav-name">
+        Zoe Kao
+    </div>
+
+
+    <nav class="nav-right">
+
+        <a href="https://github.com/zoe-kao"
+           target="_blank">
+            GitHub
+        </a>
+
+        <!-- Replace with your actual LinkedIn URL -->
+        <a href="#"
+           target="_blank">
+            LinkedIn
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="project-page-hero">
+
+    <div class="project-page-title">
+
+        <p class="eyebrow">
+            SOLID PROPULSION · DESIGN · MANUFACTURING · TEST
+        </p>
+
+
+        <h1>
+            Student-Researched Solid
+            Rocket Motor Development
+        </h1>
+
+
+        <p class="project-summary">
+
+            Leading the development of student-designed solid rocket
+            motors through performance simulation, mechanical design,
+            structural analysis, manufacturing, propellant development,
+            instrumentation, and static-fire testing.
+
+        </p>
+
+
+        <div class="tags">
+
+            <span>Solid Propulsion</span>
+            <span>CAD</span>
+            <span>FEA</span>
+            <span>OpenMotor</span>
+            <span>MATLAB</span>
+            <span>Manufacturing</span>
+            <span>Testing</span>
+            <span>Data Acquisition</span>
+
+        </div>
+
+
+        <div class="project-actions">
+
+            <a href="#static-fire"
+               class="button button-primary">
+
+                VIEW STATIC FIRE
+
+            </a>
+
+
+            <a href="#design"
+               class="button button-secondary">
+
+                MOTOR DESIGN
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <img
+        src="../assets/images/propulsion/motorcad1.png"
+        alt="CAD model of student researched solid rocket motor"
+        class="project-hero-image"
+    >
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="project-body">
+
+
+
+<!-- =====================================================
+     01 OVERVIEW
+===================================================== -->
+
+<section class="project-text-section">
+
+    <p class="project-label">
+        01 — OVERVIEW
+    </p>
+
+
+    <h2>
+        Building an in-house propulsion capability
+    </h2>
+
+
+    <p>
+        The long-term goal of Case Rocket Team's Solid Propulsion
+        R&D program is to develop the knowledge, procedures, hardware,
+        and testing infrastructure required to design and operate
+        Student Researched and Developed (SRAD) solid rocket motors.
+    </p>
+
+
+    <p>
+        I began working on development of the team's first SRAD
+        motor and now lead the effort as Solid Propulsion R&D Chief
+        Engineer. My work spans the complete engineering cycle:
+        motor performance simulation, grain design, case and closure
+        design, structural analysis, manufacturing, propellant
+        processing, instrumentation, testing, and post-test analysis.
+    </p>
+
+
+    <p>
+        Beyond producing a single successful motor, a major goal is
+        to establish a repeatable engineering process that future
+        team members can safely build upon.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     02 ENGINEERING SCOPE
+===================================================== -->
+
+<section class="project-two-column">
+
+    <div>
+
+        <p class="project-label">
+            02 — MY ROLE
+        </p>
+
+
+        <h2>
+            From preliminary design to static fire
+        </h2>
+
+
+        <p>
+            I coordinate motor development across performance,
+            structures, manufacturing, propellant processing,
+            instrumentation, testing, and documentation.
+        </p>
+
+
+        <p>
+            The project requires decisions across multiple disciplines:
+            internal ballistics affect the grain and nozzle geometry;
+            chamber pressure drives structural and sealing requirements;
+            manufacturing constraints influence component design; and
+            every subsystem must ultimately integrate into a safe,
+            testable motor.
+        </p>
+
+    </div>
+
+
+    <aside class="project-highlight">
+
+        <strong>
+            Performance
+        </strong>
+
+        <p>
+            Internal-ballistics simulation, burn characteristics,
+            pressure and thrust prediction
+        </p>
+
+
+        <strong>
+            Structures
+        </strong>
+
+        <p>
+            Motor case FEA, closure retention, snap-ring calculations
+        </p>
+
+
+        <strong>
+            Mechanical Design
+        </strong>
+
+        <p>
+            CAD, sealing interfaces, O-ring sizing, nozzle and closure design
+        </p>
+
+
+        <strong>
+            Manufacturing
+        </strong>
+
+        <p>
+            Machining, waterjet cutting, graphite components,
+            tooling and assembly
+        </p>
+
+
+        <strong>
+            Testing
+        </strong>
+
+        <p>
+            Static-fire planning, instrumentation, thrust and chamber-pressure analysis
+        </p>
+
+    </aside>
+
+</section>
+
+
+
+<!-- =====================================================
+     03 SYSTEM DESIGN
+===================================================== -->
+
+<section class="project-text-section"
+         id="design">
+
+    <p class="project-label">
+        03 — MOTOR ARCHITECTURE
+    </p>
+
+
+    <h2>
+        Designing the motor as a coupled system
+    </h2>
+
+
+    <p>
+        Motor geometry is developed iteratively rather than treating
+        the grain, case, closures, nozzle, and seals as independent
+        components.
+    </p>
+
+
+    <p>
+        Performance simulations establish expected chamber-pressure
+        and thrust behavior. Those predictions inform structural
+        loading, closure retention, sealing requirements, nozzle
+        geometry, and the mechanical packaging of the complete motor.
+    </p>
+
+
+    <p>
+        I use CAD to evaluate component interfaces, tolerances,
+        assembly sequence, retention features, and manufacturability
+        before committing hardware to fabrication.
+    </p>
+
+</section>
+
+
+
+<div class="project-gallery">
+
+    <figure>
+
+        <img
+            src="../assets/images/propulsion/motorcad1.png"
+            alt="CAD model of solid rocket motor"
+        >
+
+        <figcaption>
+            Overall motor architecture and component integration.
+        </figcaption>
+
+    </figure>
+
+
+    <figure>
+
+        <img
+            src="../assets/images/propulsion/motorcad2.png"
+            alt="Detailed CAD model of solid rocket motor components"
+        >
+
+        <figcaption>
+            Detailed mechanical design of the motor assembly.
+        </figcaption>
+
+    </figure>
+
+</div>
+
+
+
+<!-- =====================================================
+     04 SIMULATION
+===================================================== -->
+
+<section class="project-two-column">
+
+    <div>
+
+        <p class="project-label">
+            04 — PERFORMANCE SIMULATION
+        </p>
+
+
+        <h2>
+            Predicting the burn before building hardware
+        </h2>
+
+
+        <p>
+            Internal-ballistics simulations are used to investigate
+            how grain geometry, burning surface area, nozzle geometry,
+            propellant behavior, and chamber pressure interact over
+            the duration of the burn.
+        </p>
+
+
+        <p>
+            Rather than optimizing only for peak thrust, I look at
+            the overall pressure and thrust history, burn duration,
+            stability of the predicted operating point, and the
+            sensitivity of the design to manufacturing variation.
+        </p>
+
+
+        <p>
+            I have also investigated effects such as erosive burning,
+            where high gas velocity through the grain port can alter
+            the expected burning behavior and therefore affect the
+            pressure history.
+        </p>
+
+    </div>
+
+
+    <aside class="project-highlight">
+
+        <strong>
+            Quantities Evaluated
+        </strong>
+
+        <p>
+            Chamber pressure
+        </p>
+
+        <p>
+            Thrust
+        </p>
+
+        <p>
+            Total impulse
+        </p>
+
+        <p>
+            Burn time
+        </p>
+
+        <p>
+            Grain regression
+        </p>
+
+        <p>
+            Burning surface area
+        </p>
+
+        <p>
+            Port-flow behavior
+        </p>
+
+    </aside>
+
+</section>
+
+
+
+<!-- =====================================================
+     05 STRUCTURAL DESIGN
+===================================================== -->
+
+<section class="project-text-section">
+
+    <p class="project-label">
+        05 — STRUCTURAL DESIGN
+    </p>
+
+
+    <h2>
+        Designing hardware around chamber pressure
+    </h2>
+
+
+    <p>
+        Predicted chamber pressure provides the primary structural
+        load for the motor hardware. I use analytical calculations
+        and finite-element analysis to evaluate stresses in the motor
+        case and to check that the design maintains adequate margin
+        under expected operating conditions.
+    </p>
+
+
+    <p>
+        Closure retention is treated as its own mechanical-design
+        problem. I perform snap-ring and retention calculations to
+        evaluate the forces transmitted through the closures and the
+        surrounding case geometry.
+    </p>
+
+
+    <p>
+        The design process also includes sizing and locating O-ring
+        interfaces so that the motor can maintain a reliable pressure
+        seal while remaining practical to manufacture and assemble.
+    </p>
+
+</section>
+
+
+
+<div class="engineering-process-grid">
+
+    <div class="engineering-process-card">
+
+        <span>01</span>
+
+        <h3>
+            Pressure Loads
+        </h3>
+
+        <p>
+            Convert predicted chamber pressure into structural
+            load cases for the case and closures.
+        </p>
+
+    </div>
+
+
+    <div class="engineering-process-card">
+
+        <span>02</span>
+
+        <h3>
+            Case FEA
+        </h3>
+
+        <p>
+            Evaluate stress distribution and identify areas requiring
+            geometric refinement.
+        </p>
+
+    </div>
+
+
+    <div class="engineering-process-card">
+
+        <span>03</span>
+
+        <h3>
+            Closure Retention
+        </h3>
+
+        <p>
+            Check snap-ring and retaining-feature loads under
+            internal pressure.
+        </p>
+
+    </div>
+
+
+    <div class="engineering-process-card">
+
+        <span>04</span>
+
+        <h3>
+            Sealing
+        </h3>
+
+        <p>
+            Size O-ring interfaces and integrate sealing requirements
+            into the mechanical design.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     06 MANUFACTURING
+===================================================== -->
+
+<section class="project-text-section">
+
+    <p class="project-label">
+        06 — MANUFACTURING
+    </p>
+
+
+    <h2>
+        Turning the design into flight-like hardware
+    </h2>
+
+
+    <p>
+        The project combines conventional machining with specialized
+        materials and fabrication methods.
+    </p>
+
+
+    <p>
+        Case and closure features are designed around available
+        manufacturing capabilities. Forward-closure components have
+        been prepared using waterjet cutting and subsequent machining,
+        while graphite is used for high-temperature nozzle hardware.
+    </p>
+
+
+    <p>
+        Component designs are reviewed with experienced mentors and
+        machinists before fabrication. Their input is especially
+        valuable for evaluating tolerances, tooling access, material
+        behavior, and practical assembly considerations that are not
+        always obvious from CAD alone.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     07 PROPELLANT
+===================================================== -->
+
+<section class="project-two-column">
+
+    <div>
+
+        <p class="project-label">
+            07 — PROPELLANT DEVELOPMENT
+        </p>
+
+
+        <h2>
+            Establishing a repeatable manufacturing process
+        </h2>
+
+
+        <p>
+            The motor program uses an ammonium-perchlorate-based
+            composite propellant system. My work includes designing
+            grain geometry around desired motor performance and
+            developing team procedures for producing consistent
+            grains.
+        </p>
+
+
+        <p>
+            A major focus has been process control: documenting
+            preparation steps, improving mixing consistency,
+            monitoring material quality, and building procedures
+            that can be repeated by trained team members rather than
+            relying on undocumented individual technique.
+        </p>
+
+
+        <p>
+            The same procedures emphasize safe chemical handling,
+            controlled work areas, appropriate PPE, and clear
+            responsibilities during manufacturing operations.
+        </p>
+
+    </div>
+
+
+    <aside class="project-highlight">
+
+        <strong>
+            Design
+        </strong>
+
+        <p>
+            Grain geometry matched to performance requirements
+        </p>
+
+
+        <strong>
+            Process Development
+        </strong>
+
+        <p>
+            Standardized mixing and casting workflow
+        </p>
+
+
+        <strong>
+            Quality
+        </strong>
+
+        <p>
+            Repeatability, material consistency, inspection and documentation
+        </p>
+
+
+        <strong>
+            Safety
+        </strong>
+
+        <p>
+            PPE, controlled procedures, checklists and trained personnel
+        </p>
+
+    </aside>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROP PHOTOS
+===================================================== -->
+
+<div class="propulsion-photo-grid">
+
+
+    <figure class="propulsion-photo-card">
+
+        <img
+            src="../assets/images/propulsion/mixing.jpeg"
+            alt="Propellant mixing process"
+        >
+
+        <figcaption>
+            Propellant mixing as part of the team's controlled
+            manufacturing workflow.
+        </figcaption>
+
+    </figure>
+
+
+    <figure class="propulsion-photo-card">
+
+        <img
+            src="../assets/images/propulsion/vacumming.JPG"
+            alt="Vacuum processing during propellant manufacturing"
+        >
+
+        <figcaption>
+            Vacuum processing used during grain manufacturing and
+            quality-control development.
+        </figcaption>
+
+    </figure>
+
+
+    <figure class="propulsion-photo-card">
+
+        <img
+            src="../assets/images/propulsion/grains.jpeg"
+            alt="Completed solid rocket motor grains"
+        >
+
+        <figcaption>
+            Manufactured motor grains and test hardware.
+        </figcaption>
+
+    </figure>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     08 STATIC FIRE
+===================================================== -->
+
+<section class="project-text-section"
+         id="static-fire">
+
+    <p class="project-label">
+        08 — STATIC FIRE TESTING
+    </p>
+
+
+    <h2>
+        Closing the loop with measured performance
+    </h2>
+
+
+    <p>
+        Static-fire testing provides the most important validation of
+        the motor-development process. The test measures actual thrust
+        and chamber pressure through the burn, allowing the physical
+        motor to be compared with pre-test simulation.
+    </p>
+
+
+    <p>
+        The measured thrust curve shows rapid ignition followed by a
+        relatively stable operating region before tail-off. Chamber
+        pressure follows the same overall burn behavior, providing
+        an additional indication of the motor's internal performance.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     STATIC FIRE VIDEO
+===================================================== -->
+
+<div class="static-fire-video">
+
+    <video controls
+           playsinline
+           preload="metadata">
+
+        <source
+            src="../assets/video/statictestfire.mov"
+            type="video/quicktime">
+
+        Your browser does not support embedded video.
+
+    </video>
+
+    <p class="video-caption">
+        Static-fire test of the team's experimental solid rocket motor.
+    </p>
+
+</div>
+
+
+
+<!-- =====================================================
+     TEST RESULTS
+===================================================== -->
+
+<div class="test-results-grid">
+
+    <div class="test-result">
+
+        <span class="test-result-value">
+            548.5
+        </span>
+
+        <span class="test-result-unit">
+            N·s
+        </span>
+
+        <p>
+            Total Impulse
+        </p>
+
+    </div>
+
+
+    <div class="test-result">
+
+        <span class="test-result-value">
+            219
+        </span>
+
+        <span class="test-result-unit">
+            N
+        </span>
+
+        <p>
+            Average Thrust
+        </p>
+
+    </div>
+
+
+    <div class="test-result">
+
+        <span class="test-result-value">
+            251
+        </span>
+
+        <span class="test-result-unit">
+            N
+        </span>
+
+        <p>
+            Peak Thrust
+        </p>
+
+    </div>
+
+
+    <div class="test-result">
+
+        <span class="test-result-value">
+            2.50
+        </span>
+
+        <span class="test-result-unit">
+            s
+        </span>
+
+        <p>
+            Burn Time
+        </p>
+
+    </div>
+
+
+    <div class="test-result test-result-highlight">
+
+        <span class="test-result-value">
+            I220
+        </span>
+
+        <span class="test-result-unit">
+            Approx.
+        </span>
+
+        <p>
+            Measured Motor Designation
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<figure class="research-figure propulsion-test-plot">
+
+    <img
+        src="../assets/images/propulsion/Motor_Thrust_Pressure.png"
+        alt="Measured thrust and chamber pressure during solid rocket motor static fire"
+    >
+
+    <figcaption>
+        Measured thrust and chamber-pressure histories from the static
+        fire. The test produced approximately 548.5 N·s total impulse,
+        219 N average thrust, 251 N peak thrust, and a 2.50 s burn.
+    </figcaption>
+
+</figure>
+
+
+
+<!-- =====================================================
+     09 TEST ANALYSIS
+===================================================== -->
+
+<section class="project-text-section">
+
+    <p class="project-label">
+        09 — TEST ANALYSIS
+    </p>
+
+
+    <h2>
+        Turning a static fire into design feedback
+    </h2>
+
+
+    <p>
+        The purpose of the test is not simply to demonstrate that the
+        motor operates. Measured chamber pressure and thrust provide
+        feedback for the next design iteration.
+    </p>
+
+
+    <p>
+        I compare the measured burn profile with predicted behavior,
+        examine ignition and tail-off, evaluate the stability of the
+        operating region, and use differences between simulation and
+        test to identify areas where the model or manufacturing
+        process can be improved.
+    </p>
+
+
+    <p>
+        The current test produced approximately 548.5 N·s of total
+        impulse. Using the measured average thrust, the motor is
+        reasonably described as an approximately I220-class test
+        motor.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     10 SAFETY
+===================================================== -->
+
+<section class="project-conclusion">
+
+    <p class="project-label">
+        10 — SAFETY + ENGINEERING PROCESS
+    </p>
+
+
+    <h2>
+        The motor is only one part of the project.
+    </h2>
+
+
+    <p>
+        Developing experimental propulsion hardware requires an
+        engineering process that treats safety, documentation, and
+        technical review as part of the design rather than as
+        afterthoughts.
+    </p>
+
+
+    <p>
+        I work with team mentors and experienced propulsion
+        practitioners when reviewing motor hardware, manufacturing
+        plans, test procedures, instrumentation, and operational
+        decisions.
+    </p>
+
+
+    <p>
+        The program is developed with applicable amateur-rocketry
+        requirements and established NAR, Tripoli, university, and
+        FAA safety constraints in mind. Procedures are documented so
+        that chemical handling, assembly, testing, and data analysis
+        can be performed consistently by trained team members.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     11 ENGINEERING WORKFLOW
+===================================================== -->
+
+<section class="project-text-section">
+
+    <p class="project-label">
+        11 — DEVELOPMENT PROCESS
+    </p>
+
+
+    <h2>
+        Design. Analyze. Build. Test. Learn.
+    </h2>
+
+
+    <p>
+        One of the most valuable parts of the project is the feedback
+        loop between analytical work and physical testing.
+    </p>
+
+</section>
+
+
+
+<div class="development-flow">
+
+    <div class="development-step">
+
+        <span>01</span>
+
+        <h3>
+            Simulate
+        </h3>
+
+        <p>
+            Establish expected pressure, thrust, and burn behavior.
+        </p>
+
+    </div>
+
+
+    <div class="development-arrow">
+        →
+    </div>
+
+
+    <div class="development-step">
+
+        <span>02</span>
+
+        <h3>
+            Design
+        </h3>
+
+        <p>
+            Develop the case, closures, seals, nozzle, and grain geometry.
+        </p>
+
+    </div>
+
+
+    <div class="development-arrow">
+        →
+    </div>
+
+
+    <div class="development-step">
+
+        <span>03</span>
+
+        <h3>
+            Analyze
+        </h3>
+
+        <p>
+            Verify structural loads, retention, and system interfaces.
+        </p>
+
+    </div>
+
+
+    <div class="development-arrow">
+        →
+    </div>
+
+
+    <div class="development-step">
+
+        <span>04</span>
+
+        <h3>
+            Manufacture
+        </h3>
+
+        <p>
+            Fabricate hardware and produce motor grains.
+        </p>
+
+    </div>
+
+
+    <div class="development-arrow">
+        →
+    </div>
+
+
+    <div class="development-step">
+
+        <span>05</span>
+
+        <h3>
+            Test
+        </h3>
+
+        <p>
+            Measure actual thrust and pressure.
+        </p>
+
+    </div>
+
+
+    <div class="development-arrow">
+        →
+    </div>
+
+
+    <div class="development-step">
+
+        <span>06</span>
+
+        <h3>
+            Iterate
+        </h3>
+
+        <p>
+            Compare prediction with test and improve the next design.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     12 CURRENT WORK
+===================================================== -->
+
+<section class="current-research-section">
+
+    <p class="project-label">
+        12 — CURRENT DEVELOPMENT
+    </p>
+
+
+    <h2>
+        Scaling toward the team's next motor
+    </h2>
+
+
+    <p class="current-research-intro">
+
+        Current work is focused on expanding the team's experimental
+        propulsion capability toward a larger 98 mm-class motor and
+        improving the infrastructure required to design and test it
+        repeatably.
+
+    </p>
+
+
+    <div class="finding-grid">
+
+
+        <div class="finding-card">
+
+            <span class="finding-number">
+                01
+            </span>
+
+            <h3>
+                98 mm Motor
+            </h3>
+
+            <p>
+                Developing a larger motor architecture and evaluating
+                grain, nozzle, case, sealing, and closure requirements.
+            </p>
+
+        </div>
+
+
+        <div class="finding-card">
+
+            <span class="finding-number">
+                02
+            </span>
+
+            <h3>
+                Test Stand
+            </h3>
+
+            <p>
+                Developing an instrumented static-test capability for
+                repeatable thrust and chamber-pressure measurement.
+            </p>
+
+        </div>
+
+
+        <div class="finding-card">
+
+            <span class="finding-number">
+                03
+            </span>
+
+            <h3>
+                Process Control
+            </h3>
+
+            <p>
+                Building standardized manufacturing, assembly,
+                inspection, and testing procedures.
+            </p>
+
+        </div>
+
+
+        <div class="finding-card">
+
+            <span class="finding-number">
+                04
+            </span>
+
+            <h3>
+                Model Validation
+            </h3>
+
+            <p>
+                Comparing predicted motor behavior with static-fire
+                data to improve future design confidence.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BACK
+===================================================== -->
+
+<a href="../index.html#projects"
+   class="back-link">
+
+    ← Back to all projects
+
+</a>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        Zoe Kao
+    </p>
+
+
+    <p>
+        Mechanical + Aerospace Engineering
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
