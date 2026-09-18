@@ -1215,3 +1215,1218 @@ figcaption {
     }
 
 }
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Zoe Kao's computational research on microgravity flame spread between closely spaced solid fuels.">
+
+    <title>
+        Microgravity Flame Spread CFD | Zoe Kao
+    </title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="navbar">
+
+    <nav class="nav-left">
+
+        <a href="../index.html">
+            Home
+        </a>
+
+        <a href="../index.html#projects"
+           class="active">
+            Projects
+        </a>
+
+        <a href="../resume.pdf"
+           target="_blank">
+            Resume
+        </a>
+
+    </nav>
+
+
+    <div class="nav-name">
+        Zoe Kao
+    </div>
+
+
+    <nav class="nav-right">
+
+        <a href="https://github.com/zoe-kao"
+           target="_blank">
+            GitHub
+        </a>
+
+        <!-- Replace with your actual LinkedIn URL -->
+        <a href="#"
+           target="_blank">
+            LinkedIn
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="project-page-hero">
+
+    <div class="project-page-title">
+
+        <p class="eyebrow">
+            COMPUTATIONAL FIRE DYNAMICS · MICROGRAVITY COMBUSTION
+        </p>
+
+
+        <h1>
+            Flame Spread Between
+            Closely Spaced Solid Fuels
+        </h1>
+
+
+        <p class="project-summary">
+
+            A computational investigation of how fuel separation
+            distance and imposed airflow alter thermal feedback,
+            oxygen transport, pyrolysis, and secondary ignition
+            between parallel solid-fuel samples in microgravity.
+
+        </p>
+
+
+        <div class="tags">
+
+            <span>CFD</span>
+            <span>Fortran</span>
+            <span>SIMPLER</span>
+            <span>Combustion</span>
+            <span>Heat Transfer</span>
+            <span>Radiation</span>
+            <span>Tecplot</span>
+            <span>MATLAB</span>
+
+        </div>
+
+
+        <div class="project-actions">
+
+            <a href="../assets/docs/cfd-poster.pdf"
+               target="_blank"
+               class="button button-primary">
+
+                VIEW RESEARCH POSTER
+
+            </a>
+
+
+            <a href="#current-results"
+               class="button button-secondary">
+
+                CURRENT RESULTS
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <img
+        src="../assets/images/cfd/flame-temperature-evolution.png"
+        alt="Time evolution of flame temperature for parallel samples in microgravity"
+        class="project-hero-image"
+    >
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="project-body">
+
+
+
+<!-- =====================================================
+     01 OVERVIEW
+===================================================== -->
+
+<section class="project-text-section">
+
+    <p class="project-label">
+        01 — OVERVIEW
+    </p>
+
+
+    <h2>
+        Why study closely spaced fuels?
+    </h2>
+
+
+    <p>
+        Flame spread occurs through a feedback process: heat from the
+        gas-phase flame raises the temperature of nearby solid fuel,
+        the solid pyrolyzes and releases combustible vapor, and that
+        vapor mixes with oxygen to sustain additional gas-phase
+        combustion.
+    </p>
+
+
+    <p>
+        In microgravity, buoyancy-driven flow is strongly reduced.
+        As a result, flame behavior becomes much more sensitive to
+        imposed airflow, transport within the gap, and the geometric
+        relationship between nearby combustible surfaces.
+    </p>
+
+
+    <p>
+        My research investigates two parallel solid-fuel samples.
+        Only the primary sample is externally ignited. The secondary
+        sample can ignite only if feedback from the primary flame
+        provides enough energy to initiate pyrolysis and establish a
+        sustained secondary reaction zone.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     02 MODEL
+===================================================== -->
+
+<section class="project-two-column">
+
+    <div>
+
+        <p class="project-label">
+            02 — NUMERICAL MODEL
+        </p>
+
+
+        <h2>
+            Coupled gas and solid flame-spread simulation
+        </h2>
+
+
+        <p>
+            Simulations are performed using an in-house Fortran
+            computational fire-dynamics model. The code advances
+            the gas and solid domains together using adaptive time
+            stepping.
+        </p>
+
+
+        <p>
+            The model resolves fluid flow, heat and mass transfer,
+            gas-phase combustion, radiation, heat conduction within
+            the solid fuel, and pyrolysis.
+        </p>
+
+    </div>
+
+
+    <aside class="project-highlight">
+
+        <strong>
+            Pressure–Velocity Coupling
+        </strong>
+
+        <p>
+            SIMPLER algorithm
+        </p>
+
+
+        <strong>
+            Combustion
+        </strong>
+
+        <p>
+            Finite-rate Arrhenius reaction model
+        </p>
+
+
+        <strong>
+            Radiation
+        </strong>
+
+        <p>
+            SN3D radiative-transfer solver
+        </p>
+
+
+        <strong>
+            Solid Response
+        </strong>
+
+        <p>
+            Heat conduction + two-step pyrolysis
+        </p>
+
+
+        <strong>
+            Post Processing
+        </strong>
+
+        <p>
+            Python · Tecplot · MATLAB
+        </p>
+
+    </aside>
+
+</section>
+
+
+<p class="project-note">
+    The computational model solves transient mass, momentum, energy,
+    and species conservation equations while coupling gas-phase
+    combustion, radiation, and solid pyrolysis.
+</p>
+
+
+
+<!-- =====================================================
+     03 PARAMETER SPACE
+===================================================== -->
+
+<section class="current-research-section">
+
+    <p class="project-label">
+        03 — PARAMETRIC STUDY
+    </p>
+
+
+    <h2>
+        Varying both separation distance and airflow
+    </h2>
+
+
+    <p class="current-research-intro">
+
+        The initial project examined separation distance at a single
+        imposed airflow. I later expanded the study into a two-parameter
+        investigation of sample spacing and forced-flow velocity.
+
+    </p>
+
+
+    <div class="research-matrix">
+
+        <div class="matrix-heading">
+            Separation Distance, H
+        </div>
+
+        <div class="matrix-value">1.0 cm</div>
+        <div class="matrix-value">1.5 cm</div>
+        <div class="matrix-value">2.0 cm</div>
+        <div class="matrix-value">2.5 cm</div>
+
+
+        <div class="matrix-heading">
+            Imposed Airflow, U∞
+        </div>
+
+        <div class="matrix-value">3 cm/s</div>
+        <div class="matrix-value">6 cm/s</div>
+        <div class="matrix-value">9 cm/s</div>
+        <div class="matrix-value">12 cm/s</div>
+        <div class="matrix-value">15 cm/s</div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     04 REGIME MAP
+===================================================== -->
+
+<section class="project-text-section"
+         id="current-results">
+
+    <p class="project-label">
+        04 — IGNITION REGIME
+    </p>
+
+
+    <h2>
+        When does the secondary sample actually ignite?
+    </h2>
+
+
+    <p>
+        The first step in comparing the full parameter space was to
+        classify the final behavior of each simulation.
+    </p>
+
+
+    <p>
+        The resulting regime map separates cases with sustained
+        secondary ignition from cases in which combustion remains
+        associated only with the primary sample, quenches, or still
+        requires additional interpretation.
+    </p>
+
+
+    <p>
+        The map shows that the ignition boundary cannot be described
+        using separation distance alone across the entire parameter
+        space. At sufficiently weak imposed flow, even relatively
+        close configurations can fail to sustain the same behavior
+        observed at higher velocities.
+    </p>
+
+</section>
+
+
+
+<figure class="research-figure">
+
+    <img
+        src="../assets/images/cfd/01_Ignition_Regime_Map(1).png"
+        alt="Secondary-sample ignition regime map versus separation distance and imposed airflow speed"
+    >
+
+    <figcaption>
+        Secondary-sample ignition regime as a function of separation
+        distance H and imposed airflow U∞. Green markers indicate
+        sustained secondary ignition; other markers represent
+        primary-only, quenched, or unresolved behavior.
+    </figcaption>
+
+</figure>
+
+
+
+<!-- =====================================================
+     05 IGNITION DELAY
+===================================================== -->
+
+<section class="project-text-section">
+
+    <p class="project-label">
+        05 — IGNITION TIMING
+    </p>
+
+
+    <h2>
+        Larger gaps require a longer heating period
+    </h2>
+
+
+    <p>
+        For cases that successfully produce secondary ignition,
+        separation distance strongly affects the time required for
+        the secondary sample to ignite.
+    </p>
+
+
+    <p>
+        Increasing H weakens the direct thermal interaction between
+        the primary flame and secondary surface. The secondary solid
+        therefore requires a longer period of heating before reaching
+        pyrolysis conditions.
+    </p>
+
+
+    <p>
+        Increasing imposed airflow generally reduces the ignition
+        delay within the successful ignition regime, although the
+        influence of airflow must be interpreted together with the
+        changing flame shape and transport environment.
+    </p>
+
+</section>
+
+
+
+<figure class="research-figure">
+
+    <img
+        src="../assets/images/cfd/02_Secondary_Ignition_Delay.png"
+        alt="Secondary-sample ignition delay as a function of separation distance and airflow"
+    >
+
+    <figcaption>
+        Time from primary ignition to sustained secondary ignition.
+        Ignition delay increases strongly with sample separation.
+    </figcaption>
+
+</figure>
+
+
+
+<!-- =====================================================
+     06 THERMAL FEEDBACK
+===================================================== -->
+
+<section class="project-text-section">
+
+    <p class="project-label">
+        06 — THERMAL FEEDBACK
+    </p>
+
+
+    <h2>
+        Separating convection and radiation
+    </h2>
+
+
+    <p>
+        To understand why the ignition boundary changes, I separately
+        evaluate convective and radiative heat transfer into the
+        secondary sample.
+    </p>
+
+
+    <p>
+        The largest change occurs in the convective contribution.
+        At H = 2.5 cm, average convection into the secondary surface
+        falls to approximately zero or becomes slightly negative
+        across the cases shown, while net radiation remains positive
+        for several flow speeds.
+    </p>
+
+
+    <p>
+        This behavior is consistent with the larger gap becoming
+        thermally decoupled from the primary flame. Radiation alone
+        can still reach the secondary sample, but the combined
+        thermal environment is not necessarily sufficient to
+        establish sustained pyrolysis and ignition.
+    </p>
+
+</section>
+
+
+
+<figure class="research-figure">
+
+    <img
+        src="../assets/images/cfd/05_Heat_Flux_Decomposition.png"
+        alt="Convective and net radiative heat flux into the secondary sample"
+    >
+
+    <figcaption>
+        Secondary-surface heat-flux decomposition. Convection changes
+        strongly with separation distance, while the net radiative
+        contribution follows a different trend.
+    </figcaption>
+
+</figure>
+
+
+
+<!-- =====================================================
+     07 LOCAL HEAT FLUX
+===================================================== -->
+
+<section class="project-two-column">
+
+    <div>
+
+        <p class="project-label">
+            07 — LOCAL HEATING
+        </p>
+
+
+        <h2>
+            Peak heat flux alone does not determine ignition
+        </h2>
+
+
+        <p>
+            Earlier analysis showed that a secondary surface can
+            experience a strong instantaneous local heat-flux peak
+            without successfully igniting.
+        </p>
+
+
+        <p>
+            What matters is not only the peak value, but also where
+            heating occurs, how much surface area receives that
+            heating, and how long the energy input is maintained.
+        </p>
+
+    </div>
+
+
+    <aside class="project-highlight">
+
+        <strong>
+            Magnitude
+        </strong>
+
+        <p>
+            How intense is the local heat flux?
+        </p>
+
+
+        <strong>
+            Duration
+        </strong>
+
+        <p>
+            Is the heating persistent?
+        </p>
+
+
+        <strong>
+            Spatial Extent
+        </strong>
+
+        <p>
+            How much of the secondary sample is heated?
+        </p>
+
+
+        <strong>
+            Solid Response
+        </strong>
+
+        <p>
+            Does the surface actually reach pyrolysis?
+        </p>
+
+    </aside>
+
+</section>
+
+
+
+<figure class="research-figure">
+
+    <img
+        src="../assets/images/cfd/net-heat-flux.svg"
+        alt="Net heat flux distribution into the secondary fuel sample"
+    >
+
+    <figcaption>
+        Spatial distribution of net heat flux into the secondary
+        sample. Local intensity must be interpreted together with
+        heating duration and spatial distribution.
+    </figcaption>
+
+</figure>
+
+
+
+<!-- =====================================================
+     08 OXYGEN + FLOW
+===================================================== -->
+
+<section class="project-text-section">
+
+    <p class="project-label">
+        08 — OXYGEN TRANSPORT
+    </p>
+
+
+    <h2>
+        Closer spacing improves heating but can restrict oxygen
+    </h2>
+
+
+    <p>
+        Decreasing separation brings the secondary sample closer to
+        the primary flame and strengthens thermal coupling.
+        However, the smaller gap also places a larger fraction of
+        the inter-sample region inside the reacting and
+        oxygen-depleted flow.
+    </p>
+
+
+    <p>
+        Larger gaps remain better ventilated, but the secondary
+        surface may then be too far from the primary flame to receive
+        sufficient heating for strong pyrolysis.
+    </p>
+
+
+    <p>
+        The result is a competition between thermal coupling and
+        reactant transport rather than a simple relationship in
+        which smaller separation is always more hazardous.
+    </p>
+
+</section>
+
+
+
+<figure class="research-figure">
+
+    <img
+        src="../assets/images/cfd/oxygen-velocity.svg"
+        alt="Oxygen fraction contours and velocity vectors between parallel fuel samples"
+    >
+
+    <figcaption>
+        Oxygen fraction and velocity field in the inter-sample gap.
+        Smaller separation creates stronger interaction but can also
+        increase oxygen depletion near the secondary surface.
+    </figcaption>
+
+</figure>
+
+
+
+<!-- =====================================================
+     09 PARAMETRIC HEATMAPS
+===================================================== -->
+
+<section class="project-text-section">
+
+    <p class="project-label">
+        09 — GENERALIZED PARAMETRIC BEHAVIOR
+    </p>
+
+
+    <h2>
+        Looking across the entire H–U∞ space
+    </h2>
+
+
+    <p>
+        Rather than comparing individual simulations one at a time,
+        I now extract a common set of metrics from each case and
+        examine them across the complete parameter space.
+    </p>
+
+
+    <p>
+        The heatmaps below compare secondary ignition delay,
+        primary flame-spread rate, average secondary-surface heat
+        flux, and maximum secondary-surface temperature.
+    </p>
+
+</section>
+
+
+
+<figure class="research-figure">
+
+    <img
+        src="../assets/images/cfd/12_Parametric_Heatmaps.png"
+        alt="Parametric heatmaps of ignition delay, flame spread rate, total heat flux, and maximum secondary-surface temperature"
+    >
+
+    <figcaption>
+        Generalized H–U∞ trends. Individual metrics respond
+        differently to geometry and airflow, demonstrating why
+        secondary ignition cannot be described using a single
+        heat-transfer or flow variable.
+    </figcaption>
+
+</figure>
+
+
+
+<!-- =====================================================
+     FINDINGS CARDS
+===================================================== -->
+
+<div class="finding-grid">
+
+
+    <div class="finding-card">
+
+        <span class="finding-number">
+            01
+        </span>
+
+        <h3>
+            Separation controls coupling
+        </h3>
+
+        <p>
+            Increasing H weakens interaction between the primary
+            flame and secondary surface and substantially increases
+            secondary ignition delay.
+        </p>
+
+    </div>
+
+
+
+    <div class="finding-card">
+
+        <span class="finding-number">
+            02
+        </span>
+
+        <h3>
+            Airflow changes the timescale
+        </h3>
+
+        <p>
+            Increasing imposed flow generally accelerates primary
+            flame spread and reduces secondary ignition delay within
+            successful ignition cases.
+        </p>
+
+    </div>
+
+
+
+    <div class="finding-card">
+
+        <span class="finding-number">
+            03
+        </span>
+
+        <h3>
+            Thermal response is non-monotonic
+        </h3>
+
+        <p>
+            Intermediate spacing can produce stronger useful thermal
+            interaction than either strongly confined or widely
+            separated configurations.
+        </p>
+
+    </div>
+
+
+
+    <div class="finding-card">
+
+        <span class="finding-number">
+            04
+        </span>
+
+        <h3>
+            Local behavior matters
+        </h3>
+
+        <p>
+            Global averages and peak values alone do not predict
+            ignition. The spatial and temporal distribution of
+            heating must also be considered.
+        </p>
+
+    </div>
+
+
+
+    <div class="finding-card">
+
+        <span class="finding-number">
+            05
+        </span>
+
+        <h3>
+            Pyrolysis is a key transition
+        </h3>
+
+        <p>
+            The waiting period before secondary ignition is largely
+            associated with heating the solid to the point where
+            secondary-surface pyrolysis begins.
+        </p>
+
+    </div>
+
+
+
+    <div class="finding-card">
+
+        <span class="finding-number">
+            06
+        </span>
+
+        <h3>
+            Oxygen and heat compete
+        </h3>
+
+        <p>
+            Small gaps can become oxygen limited, while large gaps
+            can remain well ventilated but too weakly heated to
+            sustain secondary ignition.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     10 IGNITION DEFINITION
+===================================================== -->
+
+<section class="project-two-column">
+
+    <div>
+
+        <p class="project-label">
+            10 — ANALYSIS METHODOLOGY
+        </p>
+
+
+        <h2>
+            Defining secondary ignition consistently
+        </h2>
+
+
+        <p>
+            As the number of simulations increased, visual inspection
+            alone was no longer sufficient for classifying ignition.
+        </p>
+
+
+        <p>
+            I therefore developed a repeatable definition combining
+            gas-phase reaction, solid response, and persistence in
+            time.
+        </p>
+
+
+        <p>
+            This allows every case in the parametric study to be
+            evaluated using the same physical criteria rather than
+            subjective interpretation of individual contour images.
+        </p>
+
+    </div>
+
+
+    <aside class="project-highlight">
+
+        <strong>
+            Reaction
+        </strong>
+
+        <p>
+            Connected gas-phase region with
+            ω̇ &gt; 10⁻⁴ g·cm⁻³·s⁻¹
+        </p>
+
+
+        <strong>
+            Location
+        </strong>
+
+        <p>
+            Reaction region contacts the secondary fuel surface
+        </p>
+
+
+        <strong>
+            Solid Response
+        </strong>
+
+        <p>
+            Coincident secondary-sample pyrolysis
+        </p>
+
+
+        <strong>
+            Persistence
+        </strong>
+
+        <p>
+            Development into a sustained high-temperature flame
+        </p>
+
+    </aside>
+
+</section>
+
+
+<p class="project-note">
+    The ignition criterion was developed as part of the research
+    workflow so that all parametric cases could be classified using
+    consistent physical evidence.
+</p>
+
+
+
+<!-- =====================================================
+     11 TEMPERATURE EVOLUTION
+===================================================== -->
+
+<section class="project-text-section">
+
+    <p class="project-label">
+        11 — FLAME EVOLUTION
+    </p>
+
+
+    <h2>
+        Following the flame through time
+    </h2>
+
+
+    <p>
+        Time-resolved temperature fields reveal how the primary
+        flame grows, interacts with the secondary sample, and
+        eventually develops into a coupled flame structure.
+    </p>
+
+
+    <p>
+        These transient fields are especially important because
+        ignition is not an instantaneous event. Surface heating,
+        pyrolysis, reactant transport, and gas-phase reaction evolve
+        together over several seconds.
+    </p>
+
+</section>
+
+
+
+<figure class="research-figure">
+
+    <img
+        src="../assets/images/cfd/flame-temperature-evolution.png"
+        alt="Transient flame temperature evolution"
+    >
+
+    <figcaption>
+        Example transient temperature evolution showing the
+        progression from primary ignition to a developed interacting
+        flame structure.
+    </figcaption>
+
+</figure>
+
+
+
+<!-- =====================================================
+     12 CURRENT INTERPRETATION
+===================================================== -->
+
+<section class="project-conclusion">
+
+    <p class="project-label">
+        12 — CURRENT INTERPRETATION
+    </p>
+
+
+    <h2>
+        Secondary ignition is a coupled transport problem.
+    </h2>
+
+
+    <p>
+        The current results indicate that separation distance and
+        airflow cannot be treated independently.
+    </p>
+
+
+    <p>
+        Separation controls how strongly the primary flame can heat
+        the neighboring fuel, while imposed flow alters flame shape,
+        spread rate, oxygen delivery, and the residence of hot gases
+        within the gap.
+    </p>
+
+
+    <p>
+        Successful secondary ignition requires the solid to receive
+        sufficient and persistent thermal feedback to begin
+        pyrolysis, while also maintaining a gas-phase environment in
+        which the released fuel vapor can mix with oxygen and sustain
+        combustion.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     13 RESEARCH EVOLUTION
+===================================================== -->
+
+<section class="project-text-section">
+
+    <p class="project-label">
+        13 — RESEARCH EVOLUTION
+    </p>
+
+
+    <h2>
+        From individual CFD cases to a predictive framework
+    </h2>
+
+
+    <p>
+        The original phase of this work focused on understanding the
+        effect of separation distance at U∞ = 6 cm/s.
+    </p>
+
+
+    <p>
+        That study showed that closer spacing increases thermal
+        interaction but can also increase confinement and oxygen
+        depletion. Intermediate spacing produced particularly strong
+        secondary-surface heating.
+    </p>
+
+
+    <p>
+        The project has since expanded into a broader parametric
+        investigation in which common ignition, heat-transfer,
+        transport, and flame-spread metrics are extracted from each
+        simulation. The long-term goal is to develop a generalized
+        relationship connecting geometry, airflow, and flame-spread
+        behavior.
+    </p>
+
+
+    <div class="project-actions">
+
+        <a href="../assets/docs/cfd-poster.pdf"
+           target="_blank"
+           class="button button-primary">
+
+            VIEW ORIGINAL POSTER
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     14 CURRENT QUESTIONS
+===================================================== -->
+
+<section class="current-research-section">
+
+    <p class="project-label">
+        14 — ONGOING WORK
+    </p>
+
+
+    <h2>
+        Current research questions
+    </h2>
+
+
+    <div class="research-question-list">
+
+        <div class="research-question">
+
+            <span>01</span>
+
+            <p>
+                Can a critical separation distance be identified for
+                secondary ignition, and does it vary systematically
+                with imposed airflow?
+            </p>
+
+        </div>
+
+
+        <div class="research-question">
+
+            <span>02</span>
+
+            <p>
+                Which local thermal quantity best predicts the
+                transition from secondary heating to sustained
+                pyrolysis?
+            </p>
+
+        </div>
+
+
+        <div class="research-question">
+
+            <span>03</span>
+
+            <p>
+                How do convective and radiative heat-transfer
+                mechanisms change as the flame becomes increasingly
+                confined?
+            </p>
+
+        </div>
+
+
+        <div class="research-question">
+
+            <span>04</span>
+
+            <p>
+                Can flame-spread and secondary-ignition behavior be
+                collapsed into a generalized relationship involving
+                H and U∞?
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BACK
+===================================================== -->
+
+<a href="../index.html#projects"
+   class="back-link">
+
+    ← Back to all projects
+
+</a>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        Zoe Kao
+    </p>
+
+
+    <p>
+        Mechanical + Aerospace Engineering
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
