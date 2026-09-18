@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Microgravity Flame Spread CFD | Zoe Kao</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+
+<body>
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<header class="navbar">
+
+    <nav class="nav-left">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#projects" class="active">Projects</a>
+        <a href="../resume.pdf" target="_blank">Resume</a>
+    </nav>
+
+    <div class="nav-name">
+        Zoe Kao
+    </div>
+
+    <nav class="nav-right">
+        <a href="https://github.com/zoe-kao" target="_blank">
+            GitHub
+        </a>
+
+        <!-- Replace this later with your real LinkedIn -->
+        <a href="#" target="_blank">
+            LinkedIn
+        </a>
+    </nav>
+
+</header>
+
+
+<!-- =========================================
+     PROJECT HERO
+========================================= -->
+
+<section class="project-page-hero">
+
+    <div class="project-page-title">
+
+        <p class="eyebrow">
+            COMPUTATIONAL FIRE DYNAMICS
+        </p>
+
+        <h1>
+            Microgravity Flame Spread
+            Between Parallel Samples
+        </h1>
+
+        <p class="project-summary">
+            A computational investigation of how separation distance
+            and imposed airflow influence thermal interaction,
+            oxygen availability, and flame behavior between closely
+            spaced solid fuels in microgravity.
+        </p>
+
+        <div class="tags">
+            <span>CFD</span>
+            <span>Fortran</span>
+            <span>SIMPLER</span>
+            <span>Tecplot</span>
+            <span>MATLAB</span>
+            <span>Combustion</span>
+        </div>
+
+    </div>
+
+
+    <img
+        src="../assets/images/cfd-hero.png"
+        alt="Temperature contour from CFD flame spread simulation"
+        class="project-hero-image"
+    >
+
+</section>
+
+
+<!-- =========================================
+     PROJECT CONTENT
+========================================= -->
+
+<main class="project-body">
+
+
+    <!-- 01 OVERVIEW -->
+
+    <section class="project-text-section">
+
+        <p class="project-label">
+            01 — OVERVIEW
+        </p>
+
+        <h2>
+            The Research Problem
+        </h2>
+
+        <p>
+            In microgravity, buoyancy-driven flow is greatly reduced,
+            making imposed airflow and geometry especially important
+            to flame spread.
+        </p>
+
+        <p>
+            This project investigates flame interaction between two
+            thin, parallel solid-fuel samples. One sample is ignited,
+            and the resulting flame can transfer heat to the neighboring
+            sample while simultaneously consuming oxygen in the gap.
+        </p>
+
+        <p>
+            My work examines the competing effects of increased thermal
+            coupling and reduced oxygen availability as sample separation
+            distance and imposed airflow are varied.
+        </p>
+
+    </section>
+
+
+
+    <!-- 02 RESEARCH QUESTION -->
+
+    <section class="project-two-column">
+
+        <div>
+
+            <p class="project-label">
+                02 — RESEARCH QUESTION
+            </p>
+
+            <h2>
+                How do geometry and airflow change flame interaction?
+            </h2>
+
+            <p>
+                The central goal is to understand how separation distance
+                between fuel samples and imposed flow velocity affect the
+                local thermal and chemical environment surrounding the flame.
+            </p>
+
+        </div>
+
+
+        <aside class="project-highlight">
+
+            <strong>
+                Variables Studied
+            </strong>
+
+            <p>
+                Sample separation distance, H
+            </p>
+
+            <p>
+                Imposed airflow velocity
+            </p>
+
+            <strong>
+                Quantities Analyzed
+            </strong>
+
+            <p>
+                Temperature
+            </p>
+
+            <p>
+                Oxygen concentration
+            </p>
+
+            <p>
+                Streamwise velocity
+            </p>
+
+            <p>
+                Reaction rate
+            </p>
+
+            <p>
+                Secondary-surface heating
+            </p>
+
+        </aside>
+
+    </section>
+
+
+
+    <!-- HERO CONTOUR -->
+
+    <figure class="project-figure">
+
+        <img
+            src="../assets/images/cfd-temperature.png"
+            alt="Temperature contour between parallel fuel samples"
+        >
+
+        <figcaption>
+            Example simulated temperature field between parallel
+            fuel samples.
+        </figcaption>
+
+    </figure>
+
+
+
+    <!-- 03 COMPUTATIONAL MODEL -->
+
+    <section class="project-text-section">
+
+        <p class="project-label">
+            03 — COMPUTATIONAL MODEL
+        </p>
+
+        <h2>
+            Simulating coupled flame-spread physics
+        </h2>
+
+        <p>
+            Simulations are performed using an in-house Fortran CFD code
+            that solves the coupled flow, pressure, heat-transfer,
+            species-transport, combustion, radiation, and solid-fuel
+            pyrolysis problem.
+        </p>
+
+        <p>
+            The flow field is solved using the SIMPLER pressure-velocity
+            coupling algorithm. Simulation output is processed and
+            visualized using Tecplot and MATLAB.
+        </p>
+
+    </section>
+
+
+
+    <!-- MODEL IMAGE -->
+
+    <figure class="project-figure">
+
+        <img
+            src="../assets/images/cfd-geometry.png"
+            alt="Computational geometry for parallel sample flame spread"
+        >
+
+        <figcaption>
+            Computational configuration showing the two parallel fuel
+            samples and imposed airflow direction.
+        </figcaption>
+
+    </figure>
+
+
+
+    <!-- 04 PARAMETER SPACE -->
+
+    <section class="project-text-section">
+
+        <p class="project-label">
+            04 — PARAMETER SPACE
+        </p>
+
+        <h2>
+            Separation distance and airflow
+        </h2>
+
+        <p>
+            I compare simulations at multiple sample separation distances
+            and imposed airflow velocities to isolate how confinement,
+            heat transfer, oxygen transport, and flow acceleration change
+            the flame environment.
+        </p>
+
+    </section>
+
+
+    <div class="parameter-grid">
+
+        <div class="parameter-card">
+            <span class="parameter-number">1.5 cm</span>
+            <p>Sample separation</p>
+        </div>
+
+        <div class="parameter-card">
+            <span class="parameter-number">2.0 cm</span>
+            <p>Sample separation</p>
+        </div>
+
+        <div class="parameter-card">
+            <span class="parameter-number">2.5 cm</span>
+            <p>Sample separation</p>
+        </div>
+
+        <div class="parameter-card">
+            <span class="parameter-number">6 cm/s</span>
+            <p>Baseline airflow</p>
+        </div>
+
+        <div class="parameter-card">
+            <span class="parameter-number">12 cm/s</span>
+            <p>Higher airflow case</p>
+        </div>
+
+    </div>
+
+
+
+    <!-- 05 RESULTS -->
+
+    <section class="project-text-section">
+
+        <p class="project-label">
+            05 — ANALYSIS
+        </p>
+
+        <h2>
+            Competing thermal and oxygen effects
+        </h2>
+
+        <p>
+            Reducing the gap between samples can increase thermal
+            interaction and secondary-surface heating. At the same time,
+            stronger confinement can increase oxygen depletion near the
+            flame.
+        </p>
+
+        <p>
+            Because these mechanisms compete with one another, the effect
+            of separation distance is not necessarily monotonic. I analyze
+            temperature, oxygen, velocity, reaction rate, and surface
+            heating together rather than relying on a single flame metric.
+        </p>
+
+    </section>
+
+
+
+    <!-- IMAGE GALLERY -->
+
+    <div class="project-gallery">
+
+        <figure>
+            <img
+                src="../assets/images/cfd-temperature.png"
+                alt="Temperature contour"
+            >
+
+            <figcaption>
+                Temperature field
+            </figcaption>
+        </figure>
+
+
+        <figure>
+            <img
+                src="../assets/images/cfd-oxygen.png"
+                alt="Oxygen concentration contour"
+            >
+
+            <figcaption>
+                Oxygen concentration
+            </figcaption>
+        </figure>
+
+
+        <figure>
+            <img
+                src="../assets/images/cfd-velocity.png"
+                alt="Velocity vectors from CFD simulation"
+            >
+
+            <figcaption>
+                Flow field and velocity vectors
+            </figcaption>
+        </figure>
+
+
+        <figure>
+            <img
+                src="../assets/images/cfd-reaction.png"
+                alt="Reaction rate near the secondary fuel sample"
+            >
+
+            <figcaption>
+                Reaction behavior near the secondary sample
+            </figcaption>
+        </figure>
+
+    </div>
+
+
+
+    <!-- 06 DATA EXTRACTION -->
+
+    <section class="project-text-section">
+
+        <p class="project-label">
+            06 — DATA EXTRACTION
+        </p>
+
+        <h2>
+            Looking beyond contour plots
+        </h2>
+
+        <p>
+            Quantitative data are extracted along physically meaningful
+            locations within the domain, including the center of the gap
+            and the surface of the secondary fuel sample.
+        </p>
+
+        <p>
+            These profiles allow comparison of streamwise velocity,
+            gas temperature, oxygen concentration, secondary-surface
+            temperature, and reaction rate between simulations.
+        </p>
+
+    </section>
+
+
+
+    <figure class="project-figure">
+
+        <img
+            src="../assets/images/cfd-plot.png"
+            alt="Example quantitative CFD comparison plot"
+        >
+
+        <figcaption>
+            Example comparison of simulation quantities across
+            separation-distance or airflow cases.
+        </figcaption>
+
+    </figure>
+
+
+
+    <!-- 07 TAKEAWAY -->
+
+    <section class="project-conclusion">
+
+        <p class="project-label">
+            07 — TAKEAWAY
+        </p>
+
+        <h2>
+            Geometry changes more than just heat transfer.
+        </h2>
+
+        <p>
+            Closely spaced fuels interact through a combination of
+            thermal feedback, oxygen transport, chemical reaction,
+            and flow modification. Understanding all of these effects
+            together is necessary to explain changes in flame behavior
+            and secondary ignition.
+        </p>
+
+    </section>
+
+
+
+    <a
+        href="../index.html#projects"
+        class="back-link"
+    >
+        ← Back to all projects
+    </a>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <p>
+        Zoe Kao
+    </p>
+
+    <p>
+        Mechanical + Aerospace Engineering
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
