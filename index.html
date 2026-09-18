@@ -1,32 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Zoe Kao | Engineering Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
-    <h1>Zoe Kao</h1>
+<!-- ================= NAVIGATION ================= -->
+
+<header class="navbar">
+
+    <nav class="nav-left">
+        <a href="index.html" class="active">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="resume.pdf" target="_blank">Resume</a>
+    </nav>
+
+    <div class="nav-name">
+        Zoe Kao
+    </div>
+
+    <nav class="nav-right">
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/"
+           target="_blank">
+            LinkedIn
+        </a>
+
+        <a href="https://github.com/zoe-kao"
+           target="_blank">
+            GitHub
+        </a>
+    </nav>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-photo">
+
+        <div class="photo-decoration"></div>
+
+        <img
+            src="assets/images/headshot.jpg"
+            alt="Zoe Kao"
+            class="headshot"
+        >
+
+    </div>
+
+
+    <div class="hero-content">
+
+        <!-- Decorative engineering image -->
+        <img
+            src="assets/images/motor-cad.png"
+            class="engineering-sketch sketch-top"
+            alt=""
+        >
+
+
+        <p class="eyebrow">
+            MECHANICAL + AEROSPACE ENGINEERING
+        </p>
+
+        <h1>
+            Hi, I'm <span>Zoe.</span>
+        </h1>
+
+        <h2>
+            I build things that fly,<br>
+            burn, and move.
+        </h2>
+
+        <p class="hero-description">
+            I'm a Mechanical and Aerospace Engineering student at
+            Case Western Reserve University interested in propulsion,
+            computational fluid dynamics, aerodynamics, testing,
+            and experimental engineering.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="button button-primary">
+                VIEW PROJECTS
+            </a>
+
+            <a href="resume.pdf"
+               target="_blank"
+               class="button button-secondary">
+                VIEW RESUME
+            </a>
+
+        </div>
+
+
+        <img
+            src="assets/images/airbrake-sketch.png"
+            class="engineering-sketch sketch-bottom"
+            alt=""
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="projects-section" id="projects">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            SELECTED WORK
+        </p>
+
+        <h2>
+            Engineering Projects
+        </h2>
+
+        <p>
+            A selection of my work in propulsion, CFD,
+            aerodynamics, design, manufacturing, and testing.
+        </p>
+
+    </div>
+
+
+    <div class="project-grid">
+
+
+        <!-- CFD -->
+
+        <a href="projects/cfd-research.html"
+           class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="assets/images/cfd-hero.jpg"
+                    alt="Microgravity flame spread CFD simulation"
+                >
+
+            </div>
+
+            <div class="project-info">
+
+                <p class="project-number">01 / RESEARCH</p>
+
+                <h3>
+                    Microgravity Flame Spread CFD
+                </h3>
+
+                <p>
+                    Computational investigation of flame spread
+                    between closely spaced solid fuels under
+                    microgravity conditions.
+                </p>
+
+                <div class="tags">
+                    <span>CFD</span>
+                    <span>Fortran</span>
+                    <span>Combustion</span>
+                    <span>Heat Transfer</span>
+                </div>
+
+                <span class="project-link">
+                    View Project →
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- PROPULSION -->
+
+        <a href="projects/solid-propulsion.html"
+           class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="assets/images/propulsion-hero.jpg"
+                    alt="Solid rocket motor development"
+                >
+
+            </div>
+
+            <div class="project-info">
+
+                <p class="project-number">
+                    02 / PROPULSION
+                </p>
+
+                <h3>
+                    98 mm Solid Rocket Motor
+                </h3>
+
+                <p>
+                    Development of a student-designed solid rocket
+                    motor including simulation, CAD, manufacturing,
+                    instrumentation, and testing.
+                </p>
+
+                <div class="tags">
+                    <span>Propulsion</span>
+                    <span>OpenMotor</span>
+                    <span>CAD</span>
+                    <span>Testing</span>
+                </div>
+
+                <span class="project-link">
+                    View Project →
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- AIRBRAKES -->
+
+        <a href="projects/airbrakes.html"
+           class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="assets/images/airbrakes-hero.jpg"
+                    alt="Rocket airbrake mechanism"
+                >
+
+            </div>
+
+            <div class="project-info">
+
+                <p class="project-number">
+                    03 / AEROSPACE DESIGN
+                </p>
+
+                <h3>
+                    IREC Airbrake System
+                </h3>
+
+                <p>
+                    Design and manufacturing of a deployable
+                    forged-carbon aerodynamic braking mechanism
+                    for a competition rocket.
+                </p>
+
+                <div class="tags">
+                    <span>SolidWorks</span>
+                    <span>Composites</span>
+                    <span>Aerodynamics</span>
+                </div>
+
+                <span class="project-link">
+                    View Project →
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- DBF -->
+
+        <a href="projects/flight-surfaces.html"
+           class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="assets/images/dbf-hero.jpg"
+                    alt="Aircraft wing and flight surface design"
+                >
+
+            </div>
+
+            <div class="project-info">
+
+                <p class="project-number">
+                    04 / AERODYNAMICS
+                </p>
+
+                <h3>
+                    AIAA Design / Build / Fly
+                </h3>
+
+                <p>
+                    Aerodynamic design and analysis of wings,
+                    empennage, control surfaces, and stability
+                    for a competition aircraft.
+                </p>
+
+                <div class="tags">
+                    <span>XFLR5</span>
+                    <span>ANSYS</span>
+                    <span>MATLAB</span>
+                    <span>CAD</span>
+                </div>
+
+                <span class="project-link">
+                    View Project →
+                </span>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
 
     <p>
-        Mechanical and Aerospace Engineering student interested in
-        propulsion, computational fluid dynamics, and engineering design.
+        Designed & built by Zoe Kao
     </p>
 
-    <h2>Projects</h2>
-
-    <h3>Solid Propulsion Research & Development</h3>
     <p>
-        Design, simulation, manufacturing, and testing of solid rocket motors.
+        <a href="mailto:YOUR-EMAIL">Email</a>
+        ·
+        <a href="https://github.com/zoe-kao">GitHub</a>
+        ·
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/">
+            LinkedIn
+        </a>
     </p>
 
-    <h3>Computational Flame Spread Research</h3>
-    <p>
-        CFD research investigating flame spread between parallel samples
-        under microgravity conditions.
-    </p>
+</footer>
+
+
+</main>
 
 </body>
+
 </html>
